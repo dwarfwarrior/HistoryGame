@@ -10,6 +10,6 @@ public class AllNamesLegions {
     CloneLegions nines = CloneLegionsFactory.getUnit("hero");
     String legion = nines.getName();
 
-    String legionNames = legion "/
+    String legionNames = legion
 
 }
