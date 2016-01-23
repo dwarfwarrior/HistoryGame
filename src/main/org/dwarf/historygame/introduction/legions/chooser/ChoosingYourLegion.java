@@ -1,8 +1,7 @@
-package org.dwarf.historygame.chooseyourlegion;
+package org.dwarf.historygame.introduction.legions.chooser;
 
-import org.dwarf.historygame.clonelegions.CloneLegion;
-import org.dwarf.historygame.clonelegions.impl.AllNamesLegions;
-import org.dwarf.historygame.introduction.ChoosingMethod;
+import org.dwarf.historygame.introduction.legions.CloneLegion;
+import org.dwarf.historygame.introduction.legions.impl.AllNamesLegions;
 
 import java.io.IOException;
 import java.util.Set;

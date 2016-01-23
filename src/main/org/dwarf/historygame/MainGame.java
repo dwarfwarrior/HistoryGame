@@ -1,7 +1,8 @@
 package org.dwarf.historygame;
 
-import org.dwarf.historygame.introduction.CloneCharacteristyc;
+import org.dwarf.historygame.clone.CloneCharacteristyc;
 import org.dwarf.historygame.introduction.Introduction;
+import org.dwarf.historygame.level_1.Start;
 
 import java.io.IOException;
 
@@ -11,11 +12,20 @@ import java.io.IOException;
 public class MainGame {
     public static void main(String[] args) throws IOException {
         // Start the game
-
-        Introduction introduction = new Introduction();
-        introduction.introduction();
         CloneCharacteristyc cloneCharacteristyc = new CloneCharacteristyc();
-        System.out.println(cloneCharacteristyc.getNameLegion());
+
+
+        // Introduction
+        Introduction introduction = new Introduction();
+        cloneCharacteristyc.setNameLegion(introduction.introduction());
+
+        // Level 1
+        Start start = new Start();
+        start.startLevel1();
+        System.out.println(cloneCharacteristyc.nameRang(cloneCharacteristyc.getRang()));
+        cloneCharacteristyc.setRang(1);
+        System.out.println(cloneCharacteristyc.nameRang(cloneCharacteristyc.getRang()));
+
     }
 
 

@@ -1,8 +1,8 @@
-package org.dwarf.historygame.introduction;
+package org.dwarf.historygame.introduction.legions.chooser;
 
-import org.dwarf.historygame.chooseyourlegion.ChoosingYourLegion;
-import org.dwarf.historygame.clonelegions.CloneLegion;
-import org.dwarf.historygame.clonelegions.impl.AllNamesLegions;
+import org.dwarf.historygame.introduction.legions.chooser.ChoosingYourLegion;
+import org.dwarf.historygame.introduction.legions.CloneLegion;
+import org.dwarf.historygame.introduction.legions.impl.AllNamesLegions;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,7 +13,7 @@ import java.util.Set;
  * Created by dwarf on 20.01.16.
  */
 public class ChoosingMethod {
-    public static void choosingMethod() throws IOException {
+    public static String choosingMethod() throws IOException {
         Set<CloneLegion> legions = AllNamesLegions.readFromFile7("legions.name");
         legions.forEach(System.out::println);
         System.out.println((char) 27 + "[36m");
@@ -24,11 +24,10 @@ public class ChoosingMethod {
 
         ChoosingYourLegion yourNameLegion = new ChoosingYourLegion();
         final String yourLegionName = yourNameLegion.returnNameLegion();
-        CloneCharacteristyc cloneCharacteristyc = new CloneCharacteristyc();
-        cloneCharacteristyc.setNameLegion(yourLegionName);
         System.out.println();
         System.out.println("Вы Выбрали Легион, Название Которого:  "
                 + (char) 27 + "[31m\"" + yourLegionName + "\"");
+        return yourLegionName;
 
     }
 
