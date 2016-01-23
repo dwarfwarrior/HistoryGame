@@ -1,6 +1,6 @@
 package org.dwarf.historygame.level_1;
 
-import org.dwarf.historygame.clone.CloneCharacteristyc;
+import org.dwarf.historygame.clone.CloneProfile;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,10 +12,16 @@ import java.io.InputStreamReader;
 public class Start {
     public static void startLevel1() throws IOException{
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        CloneCharacteristyc cloneCharacteristyc = new CloneCharacteristyc();
+        CloneProfile cloneProfile1 = new CloneProfile("Del", 1);
+        cloneProfile1.assignLieutenant("Del-l");
+        cloneProfile1.promote();
+        cloneProfile1.promote();
+        cloneProfile1.promote();
+
+
         System.out.println("Добро Пожаловать На Службу");
         reader.readLine();
-        System.out.println("Я - " + cloneCharacteristyc.getNameLieutenant());
+        System.out.println("Я - " + cloneProfile1.getNameLieutenant());
         reader.readLine();
         System.out.println("Непосредственно Командир Твоего Взвода");
         reader.readLine();

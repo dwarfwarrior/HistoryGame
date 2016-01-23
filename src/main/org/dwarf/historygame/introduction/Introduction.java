@@ -1,6 +1,6 @@
 package org.dwarf.historygame.introduction;
 
-import org.dwarf.historygame.clone.CloneCharacteristyc;
+import org.dwarf.historygame.clone.CloneProfile;
 import org.dwarf.historygame.introduction.legions.chooser.ChoosingMethod;
 
 import java.io.BufferedReader;
@@ -17,7 +17,7 @@ public class Introduction {
     public static String introduction() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         ChoosingMethod choosingMethod = new ChoosingMethod();
-        CloneCharacteristyc cloneCharacteristyc = new CloneCharacteristyc();
+        CloneProfile cloneProfile = new CloneProfile();
         choosingMethod.text();
         System.out.println("\n" + "\n");
         reader.readLine();
@@ -26,7 +26,7 @@ public class Introduction {
         System.out.println();
         System.out.println((char) 27 + "[32m[Каминонианец] Здравствуй!");
         reader.readLine();
-        System.out.println("[Каминонианец] Твое Имя: " + cloneCharacteristyc.getName());
+        System.out.println("[Каминонианец] Твое Имя: " + cloneProfile.getName());
         reader.readLine();
         System.out.println("[Каминонианец] Твой Путь Начинаеться Сейчас");
         reader.readLine();
