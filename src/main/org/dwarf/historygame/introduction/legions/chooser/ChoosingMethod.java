@@ -1,7 +1,6 @@
 package org.dwarf.historygame.introduction.legions.chooser;
 
-import org.dwarf.historygame.introduction.legions.chooser.ChoosingYourLegion;
-import org.dwarf.historygame.introduction.legions.CloneLegion;
+import org.dwarf.historygame.introduction.legions.RomeLegion;
 import org.dwarf.historygame.introduction.legions.impl.AllNamesLegions;
 
 import java.io.BufferedReader;
@@ -14,7 +13,7 @@ import java.util.Set;
  */
 public class ChoosingMethod {
     public static String choosingMethod() throws IOException {
-        Set<CloneLegion> legions = AllNamesLegions.readFromFile7("legions.name");
+        Set<RomeLegion> legions = AllNamesLegions.readFromFile7("legions.name");
         legions.forEach(System.out::println);
         System.out.println((char) 27 + "[36m");
 

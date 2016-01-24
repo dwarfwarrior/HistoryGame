@@ -1,16 +1,16 @@
-package org.dwarf.historygame.clonelegions;
+package org.dwarf.historygame.introduction.legions;
 
 /**
  * Created by dwarf on 17.01.16.
  */
-public class CloneLegion {
+public class RomeLegion {
     public String getName() {
         return name;
     }
 
     protected String name;
 
-    public CloneLegion(String name) {
+    public RomeLegion(String name) {
         this.name = name;
     }
 
@@ -23,9 +23,9 @@ public class CloneLegion {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof CloneLegion)) return false;
+        if (!(o instanceof RomeLegion)) return false;
 
-        CloneLegion that = (CloneLegion) o;
+        RomeLegion that = (RomeLegion) o;
 
         return name != null ? name.equals(that.name) : that.name == null;
 

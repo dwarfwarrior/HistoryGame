@@ -1,25 +1,40 @@
-package org.dwarf.historygame.clone;
+package org.dwarf.historygame.legioner;
 
 /**
  * Created by dwarf on 20.01.16.
  */
-public class CloneProfile {
+public class LegionerProfile {
     protected String name; // = "ДС-3293";
-    protected CloneProfile lieutenant; // = "ВЛ-1029";
+    protected LegionerProfile lieutenant; // = "ВЛ-1029";
     protected String nameLegion;
     protected int rang = 0;
 
-    public CloneProfile(String name) {
-        this.name = name;
+    public LegionerProfile() {
+        init();
     }
 
-    public CloneProfile(String name, int rang) {
+    public LegionerProfile(String name) {
+        this.name = name;
+        init();
+    }
+
+    public LegionerProfile(String name, int rang) {
         this.name = name;
         this.rang = rang;
+        init();
     }
 
-    public void assignLieutenant(CloneProfile lieutenant) {
+    public void assignLieutenant(LegionerProfile lieutenant) {
         this.lieutenant = lieutenant;
+    }
+
+    private void init() {
+        System.out.println("Created unit with profile " + this);
+    }
+
+    @Override
+    public String toString() {
+        return "Legioner [" + name +", " +getRangName() + ", " + lieutenant + ", " + nameLegion + "]";
     }
 
     public void promote() {

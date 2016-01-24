@@ -1,6 +1,6 @@
 package org.dwarf.historygame.introduction.legions.chooser;
 
-import org.dwarf.historygame.introduction.legions.CloneLegion;
+import org.dwarf.historygame.introduction.legions.RomeLegion;
 import org.dwarf.historygame.introduction.legions.impl.AllNamesLegions;
 
 import java.io.IOException;
@@ -13,10 +13,10 @@ public class ChoosingYourLegion {
     public String chooseyourlegion() throws IOException {
         ChoosingMethod choosingMethod = new ChoosingMethod();
         String yourLegion = choosingMethod.nameLegion();
-        Set<CloneLegion> cloneNameLegion;
+        Set<RomeLegion> cloneNameLegion;
         cloneNameLegion = readFromFileNamesLegions();
 
-        for (CloneLegion legion : cloneNameLegion) {
+        for (RomeLegion legion : cloneNameLegion) {
 
             if (legion.getName().equals(yourLegion)) {
                 return yourLegion;
@@ -27,8 +27,8 @@ public class ChoosingYourLegion {
     }
 
 
-    public static Set<CloneLegion> readFromFileNamesLegions() {
-        Set<CloneLegion> cloneNameLegion;
+    public static Set<RomeLegion> readFromFileNamesLegions() {
+        Set<RomeLegion> cloneNameLegion;
         cloneNameLegion = AllNamesLegions.getLegions();
 
         return cloneNameLegion;

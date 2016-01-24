@@ -1,6 +1,6 @@
 package org.dwarf.historygame.introduction;
 
-import org.dwarf.historygame.clone.CloneProfile;
+import org.dwarf.historygame.legioner.LegionerProfile;
 import org.dwarf.historygame.introduction.legions.chooser.ChoosingMethod;
 
 import java.io.BufferedReader;
@@ -11,13 +11,10 @@ import java.io.InputStreamReader;
  * Created by dwarf on 20.01.16.
  */
 public class Introduction {
-    public Introduction() {
-    }
 
-    public static String introduction() throws IOException {
+    public void introduction(LegionerProfile profile) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         ChoosingMethod choosingMethod = new ChoosingMethod();
-        CloneProfile cloneProfile = new CloneProfile();
         choosingMethod.text();
         System.out.println("\n" + "\n");
         reader.readLine();
@@ -26,7 +23,7 @@ public class Introduction {
         System.out.println();
         System.out.println((char) 27 + "[32m[Каминонианец] Здравствуй!");
         reader.readLine();
-        System.out.println("[Каминонианец] Твое Имя: " + cloneProfile.getName());
+        System.out.println("[Каминонианец] Твое Имя: " + profile.getName());
         reader.readLine();
         System.out.println("[Каминонианец] Твой Путь Начинаеться Сейчас");
         reader.readLine();
@@ -41,7 +38,9 @@ public class Introduction {
         System.out.println((char) 27 + "[32m");
         reader.readLine();
 
-        return choosingMethod.choosingMethod();
+        String nameLegion = choosingMethod.choosingMethod();
+
+        profile.setNameLegion(nameLegion);
 
     }
 }
